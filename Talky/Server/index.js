@@ -17,7 +17,7 @@ const privateCors =
   cors({
 
     origin: [
-      "http://localhost:5173"
+      "https://talky-frontend-wp7b.onrender.com"
     ],
 
     credentials: true
