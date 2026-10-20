@@ -124,7 +124,7 @@
 
     const loadAssistant = async () => {
         try {
-            const res = await fetch(`http://localhost:8000/api/assistant/config/${userId}`)
+            const res = await fetch(`https://talky-backend-fxrl.onrender.com/api/assistant/config/${userId}`)
 
             const data = await res.json()
 
