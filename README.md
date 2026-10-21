@@ -1,3 +1,7 @@
+# 🎙️ Talky AI – Embeddable AI Voice Assistant Platform
+
+**[🚀 Live Demo](https://talky-frontend-wp7b.onrender.com/builder)**
+
 ## 📖 About
 
 **Talky AI** is a SaaS platform that lets anyone add a smart, voice-driven virtual assistant to their website, with no coding required. Sign in with Google, describe your business, pick a tone and theme, and copy one line of code. Your visitors can then **talk** to your website, ask questions, and even be **navigated to the right page by voice**.
@@ -10,7 +14,7 @@
 |---|---|---|
 | 🎤 | **Voice Conversations** | Visitors speak and the assistant answers out loud, using the browser's Web Speech API (speech recognition and speech synthesis). |
 | 🧠 | **Business-Aware AI** | Powered by Google Gemini. The assistant is trained on your business name, type and description so answers stay relevant. |
-| 🧭 | **Voice Navigation** | Say *"open pricing"* or *"take me to contact"* and the assistant redirects the visitor to the right page using your custom keywords. |
+| 🧭 | **Voice Navigation** | Say "open pricing" or "take me to contact" and the assistant redirects the visitor to the right page using your custom keywords. |
 | 🎨 | **Customizable Look** | Choose from 4 themes (Light, Dark, Glass, Neon) and 3 personalities (Friendly, Professional, Sales). |
 | 🔌 | **One-Line Embed** | Paste a single script tag before `</body>` and the floating assistant appears on your site. |
 | 🔐 | **Google Sign-In** | Secure one-click login with Firebase Authentication and JWT cookie sessions. |
@@ -22,7 +26,7 @@
 
 ## 🛠️ How It Works
 
-```
+```text
 ┌──────────────┐   1. Configure    ┌──────────────────┐
 │   Builder    │ ────────────────► │   MongoDB        │
 │  (React app) │                   │ (assistant config)│
@@ -35,11 +39,11 @@
 │          data-user-id="...">     │ 3. Visitor speaks 🎤
 │                                  │ ────────────────────┐
 └──────────────────────────────────┘                     ▼
-                                              ┌────────────────────┐
-              6. Speaks the reply 🔊  ◄────── │ Express API        │
-                                              │ • navigation intent│
-                                              │ • Gemini response  │
-                                              └────────────────────┘
+                                             ┌────────────────────┐
+             6. Speaks the reply 🔊  ◄────── │ Express API        │
+                                             │ • navigation intent│
+                                             │ • Gemini response  │
+                                             └────────────────────┘
 ```
 
 1. **Build** your assistant in the dashboard: name, business info, tone, theme and navigation pages.
@@ -72,7 +76,7 @@
 
 ## 📂 Project Structure
 
-```
+```text
 Talky-AI/
 ├── Client/                      # React frontend (Vite)
 │   ├── public/
@@ -108,6 +112,7 @@ After saving your assistant in the **Builder**, copy the generated snippet and p
 
 A floating Talky button appears on your site. Click it, tap the mic, and start talking. 🎉
 
+---
 
 ## ☁️ Deployment (Render)
 
@@ -124,6 +129,7 @@ Talky AI is deployed on **Render**.
 - Build command: `npm install && npm run build`
 - Publish directory: `dist`
 - Environment variables: `VITE_FIREBASE_API_KEY`, `VITE_RAZORPAY_KEY_ID`
+
 ---
 
 ## 💎 Plans
@@ -137,7 +143,3 @@ Talky AI is deployed on **Render**.
 | Price | ₹0 | ₹699 |
 
 ---
-
-
-
-
