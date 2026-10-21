@@ -108,9 +108,6 @@ After saving your assistant in the **Builder**, copy the generated snippet and p
 
 A floating Talky button appears on your site. Click it, tap the mic, and start talking. 🎉
 
-> 💡 **Voice navigation tip:** add pages in the Builder (for example *Pricing → `/pricing` → keywords: `pricing, plans, cost`*). Visitors can then say *"open pricing"* and be taken there.
-
----
 
 ## ☁️ Deployment (Render)
 
