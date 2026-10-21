@@ -1,25 +1,3 @@
-<div align="center">
-
-<img src="Client/public/logo.png" alt="Talky AI Logo" width="90" />
-
-# Talky AI
-
-### Give your website a voice. 🎙️
-
-**Create a custom voice-enabled AI assistant for any website and embed it with a single `<script>` tag.**
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://your-talky-ai-app.onrender.com)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-Express%205-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Gemini](https://img.shields.io/badge/Google%20Gemini-AI-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
-
-[Live Demo](https://your-talky-ai-app.onrender.com) · [Features](#-features) · [How It Works](#-how-it-works) · [Tech Stack](#-tech-stack) · [Getting Started](#-getting-started)
-
-</div>
-
----
-
 ## 📖 About
 
 **Talky AI** is a SaaS platform that lets anyone add a smart, voice-driven virtual assistant to their website, with no coding required. Sign in with Google, describe your business, pick a tone and theme, and copy one line of code. Your visitors can then **talk** to your website, ask questions, and even be **navigated to the right page by voice**.
@@ -87,10 +65,6 @@
 - Razorpay (payments)
 - Google Gemini API
 
-**Embeddable Widget**
-- Vanilla JavaScript and CSS (no framework dependency)
-- Web Speech API (`SpeechRecognition` and `SpeechSynthesis`)
-
 **Deployment**
 - Render
 
@@ -118,76 +92,6 @@ Talky-AI/
     ├── Routes/                  # API route definitions
     └── index.js                 # App entry point
 ```
-
----
-
-## 🔌 API Reference
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| `POST` | `/api/auth/google` | – | Sign in or register with Google profile |
-| `GET` | `/api/auth/logout` | – | Clear session cookie |
-| `GET` | `/api/user/current-user` | ✅ | Get the logged-in user |
-| `POST` | `/api/user/save-assistant` | ✅ | Save assistant configuration |
-| `GET` | `/api/assistant/config/:userId` | – | Public config used by the embed widget (API key excluded) |
-| `POST` | `/api/assistant/ask` | – | Send a message and get an AI or navigation response |
-| `POST` | `/api/billing/order` | ✅ | Create a Razorpay order |
-| `POST` | `/api/billing/verify` | ✅ | Verify payment signature and activate Pro |
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+
-- A MongoDB database (local or Atlas)
-- A Firebase project with Google sign-in enabled
-- A Razorpay account (test keys work)
-- A Google Gemini API key (from [Google AI Studio](https://aistudio.google.com/))
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/<your-username>/talky-ai.git
-cd talky-ai
-```
-
-### 2. Set up the server
-```bash
-cd Server
-npm install
-```
-
-Create `Server/.env`:
-```env
-PORT=8000
-MONGODB_URL=your_mongodb_connection_string
-JWT_SECRET=your_long_random_secret
-RAZORPAY_KEY_ID=your_razorpay_key_id
-RAZORPAY_KEY_SECRET=your_razorpay_key_secret
-```
-
-```bash
-npm run dev
-```
-
-### 3. Set up the client
-```bash
-cd ../Client
-npm install
-```
-
-Create `Client/.env`:
-```env
-VITE_FIREBASE_API_KEY=your_firebase_api_key
-VITE_RAZORPAY_KEY_ID=your_razorpay_key_id
-```
-
-Update your Firebase config in `Client/src/utils/firebase.js`, then:
-```bash
-npm run dev
-```
-
-The app runs at `http://localhost:5173` and the API at `http://localhost:8000`.
 
 ---
 
@@ -223,9 +127,6 @@ Talky AI is deployed on **Render**.
 - Build command: `npm install && npm run build`
 - Publish directory: `dist`
 - Environment variables: `VITE_FIREBASE_API_KEY`, `VITE_RAZORPAY_KEY_ID`
-
-After deploying, point the client's server URL, the widget's API and asset URLs in `assistant.js`, and the server's CORS allowed origin to your Render URLs. Also add your Render domain to Firebase **Authorized domains**.
-
 ---
 
 ## 💎 Plans
@@ -240,41 +141,6 @@ After deploying, point the client's server URL, the widget's API and asset URLs 
 
 ---
 
-## 🔒 Security Notes
 
-- Sessions use **HTTP-only JWT cookies**.
-- Razorpay payments are verified **server-side with HMAC-SHA256** before upgrading a user.
-- The public config endpoint **never exposes** the user's Gemini API key.
-- Secrets live in environment variables, never in the repo.
 
----
 
-## 🗺️ Roadmap
-
-- [ ] Multi-language voice support
-- [ ] Conversation analytics dashboard
-- [ ] Upload documents and FAQs to train the assistant
-- [ ] Text chat mode alongside voice
-- [ ] Domain whitelisting for embeds
-
----
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome. Feel free to open an issue or submit a pull request.
-
----
-
-## 👤 Author
-
-**Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-
----
-
-<div align="center">
-
-⭐ **If you like Talky AI, give it a star!** ⭐
-
-</div>
